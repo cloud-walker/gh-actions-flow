@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   validate:
-    uses: .github/workflows/validate.yml
+    uses: $/.github/workflows/validate.yml
   deploy-staging:
     needs: validate
     runs-on: ubuntu-latest
