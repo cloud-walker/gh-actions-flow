@@ -1,0 +1,11 @@
+on:
+  workflow_call:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "lint success!"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "tests success!"
