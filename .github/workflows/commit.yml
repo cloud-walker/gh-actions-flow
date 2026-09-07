@@ -4,7 +4,10 @@ on:
     branches:
       - main
 jobs:
+  validate:
+    uses: .github/workflows/validate.yml
   deploy-staging:
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deployed to staging!"

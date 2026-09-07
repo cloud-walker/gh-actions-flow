@@ -4,7 +4,10 @@ on:
     tags:
       - v*
 jobs:
+  validate:
+    uses: .github/workflows/validate.yml
   deploy-production:
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deployed in prod!"
